@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Moto Voyage — Plan &amp; ride motorcycle routes</title>
   <meta name="description" content="Moto Voyage: plan motorcycle routes on OpenStreetMap, save them, and open turn-by-turn navigation in Google Maps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="page-bg" aria-hidden="true"></div>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html">
@@ -28,8 +32,8 @@
     <section class="hero">
       <h1>Your routes, on the map</h1>
       <p class="lead">
-        Moto Voyage helps you plan motorcycle routes on OpenStreetMap, save them for later,
-        and open turn-by-turn navigation in Google Maps — including multi-stop trips.
+        Plan motorcycle routes on OpenStreetMap, save them on your device, and open
+        full turn-by-turn navigation in Google Maps — waypoints and all.
       </p>
       <div class="cta-row">
         <a class="btn btn-primary" href="MotoVoyage.apk" download>Download for Android</a>
@@ -37,38 +41,59 @@
       </div>
     </section>
 
-    <section class="features" aria-label="Features">
-      <article class="feature">
-        <h2>Plan on the map</h2>
-        <p>Tap the map to add waypoints. The app builds a road route along roads (OSRM).</p>
-      </article>
-      <article class="feature">
-        <h2>Save &amp; load</h2>
-        <p>Name your route and save it. Open the Saved tab to load or delete routes anytime.</p>
-      </article>
-      <article class="feature">
-        <h2>Navigate in Google Maps</h2>
-        <p>Send the full route — including all stops — to Google Maps for voice-guided riding.</p>
-      </article>
-      <article class="feature">
-        <h2>Undo &amp; clear</h2>
-        <p>Remove the last point with Undo, or clear everything and start fresh.</p>
-      </article>
-    </section>
+    <section class="showcase" aria-labelledby="showcase-heading">
+      <header class="showcase-header">
+        <p class="eyebrow">Inside the app</p>
+        <h2 id="showcase-heading">Purpose-built for planning and riding</h2>
+        <p class="showcase-lead">
+          Every screen is tuned for quick decisions on the road: clear controls, sensible defaults,
+          and no clutter between you and your next ride.
+        </p>
+      </header>
 
-    <section class="screenshots" aria-labelledby="screenshots-heading">
-      <h2 id="screenshots-heading">Screenshots</h2>
-      <p class="screenshots-intro">How Moto Voyage looks on your phone — map planning and saved routes.</p>
-      <div class="screenshot-grid">
-        <figure class="shot">
-          <img src="assets/screenshots/screen-map.png" width="412" height="915" alt="Moto Voyage map tab: route name field, Clear and Navigation buttons, map with a motorcycle route, Undo and Save route, bottom Map and Saved tabs.">
-          <figcaption>Map — plan your route, then save or open navigation.</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="assets/screenshots/screen-saved.png" width="412" height="915" alt="Moto Voyage saved routes: list with Load, Navigation, and delete, plus delete confirmation dialog.">
-          <figcaption>Saved routes — load, navigate, or delete with confirmation.</figcaption>
-        </figure>
-      </div>
+      <article class="showcase-row">
+        <div class="showcase-copy">
+          <span class="showcase-index" aria-hidden="true">01</span>
+          <h3 class="showcase-title">Map — sketch the ride, refine the line</h3>
+          <p class="showcase-desc">
+            Drop points on the map and Moto Voyage snaps a sensible road route between them using
+            open routing data. Name the route, undo mistakes, or clear and start over without losing your flow.
+          </p>
+          <ul class="showcase-points">
+            <li><strong>Tap to add waypoints</strong> — the route updates as you build your loop or one-way trip.</li>
+            <li><strong>Clear &amp; Navigation</strong> — reset the canvas or hand off the full path to Google Maps when you are ready to ride.</li>
+            <li><strong>Undo &amp; Save route</strong> — step back one point at a time, then persist the finished line under a name you choose.</li>
+            <li><strong>Map / Saved tabs</strong> — stay in planning mode or jump to your library without digging through menus.</li>
+          </ul>
+        </div>
+        <div class="showcase-visual">
+          <div class="phone-screen">
+            <img src="assets/screenshots/screen-map.png" width="412" height="915" alt="Moto Voyage map tab: route name field, Clear and Navigation buttons, map with a motorcycle route, Undo and Save route, bottom Map and Saved tabs.">
+          </div>
+        </div>
+      </article>
+
+      <article class="showcase-row showcase-row--reverse">
+        <div class="showcase-copy">
+          <span class="showcase-index" aria-hidden="true">02</span>
+          <h3 class="showcase-title">Saved routes — your garage, on the phone</h3>
+          <p class="showcase-desc">
+            Everything you save stays on your device for quick recall. Load a route back onto the map for edits,
+            send it straight to navigation, or remove it when you no longer need it — with a confirmation so nothing disappears by accident.
+          </p>
+          <ul class="showcase-points">
+            <li><strong>Load</strong> — restores the route to the map so you can tweak or ride it again.</li>
+            <li><strong>Navigation</strong> — opens the same multi-stop itinerary in Google Maps for voice-guided riding.</li>
+            <li><strong>Safe delete</strong> — the red control removes a route only after you confirm, matching the app’s careful tone.</li>
+            <li><strong>Focused top bar</strong> — “Saved routes” keeps context obvious when you leave the map.</li>
+          </ul>
+        </div>
+        <div class="showcase-visual">
+          <div class="phone-screen">
+            <img src="assets/screenshots/screen-saved.png" width="412" height="915" alt="Moto Voyage saved routes: list with Load, Navigation, and delete, plus delete confirmation dialog.">
+          </div>
+        </div>
+      </article>
     </section>
   </main>
 
