@@ -1,94 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Moto Voyage — plan motorcycle routes on the map, save trips, and open navigation when you ride."
-    />
-    <title>Moto Voyage</title>
-    <link rel="icon" type="image/png" href="assets/app-icon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&family=Syne:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="wrap header-stack">
-        <a href="index.html" class="brand-row">
-          <img
-            class="app-icon app-icon--header"
-            src="assets/app-icon.png"
-            width="72"
-            height="72"
-            alt=""
-          />
-          <div class="brand brand--header">Moto <span>Voyage</span></div>
-        </a>
-        <nav class="site-nav site-nav--below" aria-label="Main">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="legal.html">Terms &amp; Guidelines</a>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="wrap">
-          <h1>Your roads. Your route.</h1>
-          <p class="tagline">
-            Plan waypoints on the map, follow roads with automatic routing, save
-            favorite trips, and jump into navigation when you are ready to ride.
-          </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#features">Explore features</a>
-            <a class="btn btn-ghost" href="MotoVoyage.apk" download="MotoVoyage.apk">Android app</a>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moto Voyage — Plan &amp; ride motorcycle routes</title>
+  <meta name="description" content="Moto Voyage: plan motorcycle routes on OpenStreetMap, save them, and open turn-by-turn navigation in Google Maps.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-icon" src="assets/app-icon.png" alt="" width="56" height="56">
+        <div class="brand-text">
+          <span class="brand-title">Moto Voyage</span>
+          <span class="brand-tagline">Plan &amp; ride motorcycle routes</span>
         </div>
-      </section>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="legal.html">Terms &amp; Guidelines</a>
+      </nav>
+    </div>
+  </header>
 
-      <section class="features" id="features">
-        <div class="wrap">
-          <h2>Built for riders</h2>
-          <div class="grid">
-            <article class="card">
-              <h3>Map &amp; waypoints</h3>
-              <p>
-                Tap the map to drop points. Your route updates along the road
-                network so you see a realistic path between stops.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Saved routes</h3>
-              <p>
-                Name and store trips to reuse later. Load a saved route back onto
-                the map or send it to your favorite navigation app.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Navigation</h3>
-              <p>
-                Start from your current location when you allow location access,
-                with your waypoints in order — ready for the road.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="wrap">
-        <p><strong>Moto Voyage</strong> — motorcycle route planning companion.</p>
-        <p class="footer-links">
-          <a href="legal.html">Terms of Use &amp; User Guidelines</a>
-        </p>
+  <main>
+    <section class="hero">
+      <h1>Your routes, on the map</h1>
+      <p class="lead">
+        Moto Voyage helps you plan motorcycle routes on OpenStreetMap, save them for later,
+        and open turn-by-turn navigation in Google Maps — including multi-stop trips.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="MotoVoyage.apk" download>Download for Android</a>
+        <a class="btn btn-secondary" href="legal.html">Terms &amp; user guidelines</a>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section class="features" aria-label="Features">
+      <article class="feature">
+        <h2>Plan on the map</h2>
+        <p>Tap the map to add waypoints. The app builds a road route along roads (OSRM).</p>
+      </article>
+      <article class="feature">
+        <h2>Save &amp; load</h2>
+        <p>Name your route and save it. Open the Saved tab to load or delete routes anytime.</p>
+      </article>
+      <article class="feature">
+        <h2>Navigate in Google Maps</h2>
+        <p>Send the full route — including all stops — to Google Maps for voice-guided riding.</p>
+      </article>
+      <article class="feature">
+        <h2>Undo &amp; clear</h2>
+        <p>Remove the last point with Undo, or clear everything and start fresh.</p>
+      </article>
+    </section>
+
+    <section class="screenshots" aria-labelledby="screenshots-heading">
+      <h2 id="screenshots-heading">Screenshots</h2>
+      <p class="screenshots-intro">How Moto Voyage looks on your phone — map planning and saved routes.</p>
+      <div class="screenshot-grid">
+        <figure class="shot">
+          <img src="assets/screenshots/screen-map.png" width="412" height="915" alt="Moto Voyage map tab: route name field, Clear and Navigation buttons, map with a motorcycle route, Undo and Save route, bottom Map and Saved tabs.">
+          <figcaption>Map — plan your route, then save or open navigation.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/screenshots/screen-saved.png" width="412" height="915" alt="Moto Voyage saved routes: list with Load, Navigation, and delete, plus delete confirmation dialog.">
+          <figcaption>Saved routes — load, navigate, or delete with confirmation.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Moto Voyage — motorcycle route planning for Android. <a href="legal.html">Legal &amp; guidelines</a></p>
+  </footer>
+</body>
 </html>
