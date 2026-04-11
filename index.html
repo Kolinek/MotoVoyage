@@ -8,6 +8,7 @@
       content="Moto Voyage — plan motorcycle routes on the map, save trips, and open navigation when you ride."
     />
     <title>Moto Voyage</title>
+    <link rel="icon" type="image/png" href="assets/app-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,8 +19,21 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="wrap">
-        <div class="brand">Moto <span>Voyage</span></div>
+      <div class="wrap header-inner">
+        <a href="index.html" class="brand-row">
+          <img
+            class="app-icon"
+            src="assets/app-icon.png"
+            width="40"
+            height="40"
+            alt=""
+          />
+          <div class="brand">Moto <span>Voyage</span></div>
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="legal.html">Terms &amp; Guidelines</a>
+        </nav>
       </div>
     </header>
 
@@ -33,7 +47,7 @@
           </p>
           <div class="cta-row">
             <a class="btn btn-primary" href="#features">Explore features</a>
-            <span class="btn btn-ghost" aria-disabled="true">Android app</span>
+            <a class="btn btn-ghost" href="MotoVoyage.apk" download="MotoVoyage.apk">Android app</a>
           </div>
         </div>
       </section>
@@ -71,6 +85,9 @@
     <footer class="site-footer">
       <div class="wrap">
         <p><strong>Moto Voyage</strong> — motorcycle route planning companion.</p>
+        <p class="footer-links">
+          <a href="legal.html">Terms of Use &amp; User Guidelines</a>
+        </p>
       </div>
     </footer>
   </body>
