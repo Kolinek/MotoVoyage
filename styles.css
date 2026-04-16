@@ -214,11 +214,12 @@ main {
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6.8vw, 5.2rem);
+  font-size: clamp(1.85rem, 5.4vw, 5.2rem);
   font-weight: 700;
   margin: 0 0 1rem;
   letter-spacing: -0.04em;
   line-height: 0.98;
+  white-space: nowrap;
   text-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   background: linear-gradient(180deg, #fff 0%, #dfe6f2 100%);
   -webkit-background-clip: text;
@@ -277,6 +278,13 @@ main {
   background: linear-gradient(180deg, #ffa04a 0%, #f07010 100%);
   color: #1a0d00;
   box-shadow: 0 6px 32px rgba(232, 93, 4, 0.35);
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .scroll-link {
