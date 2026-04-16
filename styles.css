@@ -287,22 +287,6 @@ main {
   flex-shrink: 0;
 }
 
-.scroll-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding: 0 0.2rem;
-  color: rgba(255, 255, 255, 0.84);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-.scroll-link:hover {
-  color: #fff;
-}
-
 .btn-secondary {
   background: rgba(255, 255, 255, 0.04);
   color: var(--muted);
