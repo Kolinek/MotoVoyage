@@ -46,21 +46,24 @@ body {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-color: #0d0b09;
+  background-color: #060708;
   background-image:
-    radial-gradient(ellipse 110% 65% at 50% -18%, rgba(232, 110, 45, 0.14), transparent 58%),
-    radial-gradient(ellipse 85% 55% at 100% 12%, rgba(200, 85, 30, 0.09), transparent 52%),
-    radial-gradient(ellipse 75% 50% at 0% 38%, rgba(232, 93, 4, 0.075), transparent 50%),
-    radial-gradient(ellipse 70% 45% at 85% 92%, rgba(160, 65, 25, 0.06), transparent 48%),
-    radial-gradient(ellipse 50% 35% at 15% 75%, rgba(232, 120, 60, 0.04), transparent 45%);
+    linear-gradient(180deg, rgba(5, 7, 10, 0.3) 0%, rgba(5, 7, 10, 0.7) 42%, rgba(5, 7, 10, 0.94) 100%),
+    radial-gradient(ellipse 90% 60% at 78% 28%, rgba(232, 93, 4, 0.22), transparent 52%),
+    radial-gradient(ellipse 70% 48% at 18% 18%, rgba(255, 160, 90, 0.08), transparent 50%),
+    url("close-up-high-power-motorcycle-chopper-man-rider-night-fog-backlights-background-92640165.webp");
+  background-size: cover, auto, auto, cover;
+  background-position: center, center, center, center;
+  background-repeat: no-repeat;
 }
 
 .page-bg::before {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.045;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background:
+    linear-gradient(180deg, rgba(9, 11, 14, 0.08) 0%, rgba(9, 11, 14, 0.35) 45%, rgba(9, 11, 14, 0.68) 100%),
+    linear-gradient(90deg, rgba(8, 10, 13, 0.64) 0%, rgba(8, 10, 13, 0.28) 38%, rgba(8, 10, 13, 0.62) 100%);
   pointer-events: none;
 }
 
@@ -68,13 +71,13 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.35;
+  opacity: 0.2;
   background-image: repeating-linear-gradient(
     -18deg,
     transparent,
     transparent 3px,
-    rgba(232, 100, 40, 0.018) 3px,
-    rgba(232, 100, 40, 0.018) 4px
+    rgba(255, 255, 255, 0.018) 3px,
+    rgba(255, 255, 255, 0.018) 4px
   );
   mix-blend-mode: soft-light;
   pointer-events: none;
@@ -195,29 +198,41 @@ main {
 
 .hero {
   text-align: center;
-  padding: 0.5rem 0 1rem;
-  max-width: 40rem;
+  padding: clamp(3rem, 10vw, 7rem) 0 clamp(2rem, 5vw, 3rem);
+  max-width: 48rem;
   margin: 0 auto;
+}
+
+.hero-kicker {
+  margin: 0 0 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4.5vw, 2.65rem);
+  font-size: clamp(2.5rem, 6.8vw, 5.2rem);
   font-weight: 700;
   margin: 0 0 1rem;
   letter-spacing: -0.04em;
-  line-height: 1.12;
-  background: linear-gradient(180deg, #fff 0%, #c8d0e0 100%);
+  line-height: 0.98;
+  text-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(180deg, #fff 0%, #dfe6f2 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .lead {
-  font-size: 1.08rem;
-  color: var(--muted);
+  max-width: 42rem;
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  color: rgba(238, 242, 248, 0.82);
   margin: 0 auto 1.75rem;
   line-height: 1.65;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.3);
 }
 
 .cta-row {
@@ -262,6 +277,22 @@ main {
   background: linear-gradient(180deg, #ffa04a 0%, #f07010 100%);
   color: #1a0d00;
   box-shadow: 0 6px 32px rgba(232, 93, 4, 0.35);
+}
+
+.scroll-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0 0.2rem;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.scroll-link:hover {
+  color: #fff;
 }
 
 .btn-secondary {
@@ -465,6 +496,71 @@ main {
   border-radius: 1.75rem;
   box-shadow: var(--shadow-phone);
   vertical-align: middle;
+}
+
+.download-section {
+  padding: 4.5rem 0 1rem;
+}
+
+.download-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.6rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    rgba(13, 16, 22, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+.download-card .eyebrow {
+  margin-bottom: 0.65rem;
+}
+
+.download-card h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.75rem;
+}
+
+.download-copy {
+  max-width: 38rem;
+  margin: 0 auto 1.35rem;
+  color: rgba(238, 242, 248, 0.76);
+}
+
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+}
+
+.btn-download {
+  min-width: 180px;
+}
+
+.download-link {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.download-link:hover {
+  color: var(--text);
+}
+
+@media (min-width: 900px) {
+  .download-card {
+    padding: 1.9rem 2rem;
+  }
 }
 
 .site-footer {
